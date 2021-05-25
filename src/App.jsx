@@ -13,7 +13,8 @@ export class App extends Component {
       [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
     ],
     id: null,
-    count: 0,
+    state: 'new',
+    mines: 10,
     winner: null,
   }
 
@@ -63,7 +64,7 @@ export class App extends Component {
     return (
       <div>
         <h1>
-          MineSweeper! - <button onClick={this.handleNewGame}>New</button>
+          MineSweeper! - <button onClick={this.handleNewGame}>New Game</button>
         </h1>
         <ul>
           <li onClick={() => this.handleClickCell(0, 0)}>
