@@ -4,6 +4,7 @@
   --square-font-size: calc(8 * var(--header-font-size));
   --square-background-color: #e6e8ff;
   --square-border: 3px solid var(--square-text-color);
+  text-align: center;
 
   font: 16px / 1 sans-serif;
 }
@@ -17,61 +18,49 @@ body {
   min-height: 100%;
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 100% 100%;
-  animation: gradient 8s ease infinite;
 }
 
 h1 {
-  /* center the header */
-  text-align: center;
-
-  /* Use a sans serif font with a little spacing and color */
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 0.4rem;
   font-size: var(--header-font-size);
   color: var(--header-text-color);
 
-  /* Remove margins and set a little padding */
   margin: 0;
-  padding: var(--header-font-size);
+  padding: 2rem;
+}
 
-  /* Set a background color for the header */
-  background-color: var(--header-background);
+h3 {
+  margin: 2rem;
+  padding-left: 9rem;
 }
 
 ul,
 li {
-  /* Be gone margins! */
   margin: 0;
   padding: 0;
 
-  /* and list styles */
   list-style: none;
 }
 
 ul {
   padding-left: 15rem;
-  /* Make the height of the list equal to the height of the page MINUS the height taken by the header */
-  height: calc(100vh - 8 * var(--header-font-size));
-  width: calc(100vh - 8 * var(--header-font-size));
+
+  height: 500px;
+  width: 500px;
 
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
-  /* Add a little gap between to allow the background color through */
   gap: 0.2rem;
 
-  /* Set the background color that will show through the gap */
   background-color: var(--square-text-color);
 }
 
 ul li {
-  /* Use a monospace font */
   font-family: monospace;
-  font-size: var(--square-font-size);
 
-  /* Style the background color of the item */
   background-color: var(--square-background-color);
 
-  /* Make the cursor a pointer by default */
   cursor: pointer;
 }
